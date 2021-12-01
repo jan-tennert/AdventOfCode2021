@@ -12,6 +12,10 @@ repositories {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/io.ktor/ktor-client-core
+    implementation("io.ktor:ktor-client-core:1.6.6")
+    // https://mvnrepository.com/artifact/io.ktor/ktor-client-cio
+    implementation("io.ktor:ktor-client-cio:1.6.6")
     testImplementation(kotlin("test"))
 }
 

@@ -14,7 +14,6 @@ object Day4 : Challenge<Int>(2021, 4) {
 
     private fun getWinners(input: List<String>): List<Int> {
         val numbers = input[0].split(",").map(String::toInt)
-        println(numbers)
         val rawBoards = input.subList(1, input.size)
         var rowIndex = 0
         var boardIndex = 0
@@ -40,7 +39,7 @@ object Day4 : Challenge<Int>(2021, 4) {
             boards.toMutableList().forEach {
                 if(it.isBingo(bingoNumbers)) {
                     val lastNumber = bingoNumbers.last()
-                    val remainingNumbersSum = it.grid.flatten().also { println(it) }.filter { n -> n !in bingoNumbers }.also { println(it) }.sum()
+                    val remainingNumbersSum = it.grid.flatten().filter { n -> n !in bingoNumbers }.sum()
                     winners.add(lastNumber * remainingNumbersSum)
                     boards.remove(it)
                 }

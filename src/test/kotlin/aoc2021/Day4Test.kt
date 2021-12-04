@@ -10,14 +10,13 @@ class Day4Test {
 
     @Test
     fun `test day4 part one`() {
-        val input = getInputFile(2021, 4)
+        val input = getInputFile(2021, 4, true)
         assertEquals(Day4.solvePartOne(input.readLines()), 4512)
     }
 
     @Test
     fun `test day4 part two`() {
         val input = getInputFile(2021, 4, true)
-        println(Day4.solvePartTwo(input.readLines()))
         assertEquals(Day4.solvePartTwo(input.readLines()), 1924)
     }
 
